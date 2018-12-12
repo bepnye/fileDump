@@ -350,6 +350,8 @@ class NERModel(BaseModel):
         # Token stats
         results = { metric: {} for metric in ['f1', 'p', 'r'] }
         for tag, counts in list(stats.items()):
+          if tag == 'N': # majority negative class
+            continue
           tag_p = div_or_zero(counts['n_correct'], counts['n_pred'])
           tag_r = div_or_zero(counts['n_correct'], counts['n_true'])
           results['p'][tag] = tag_p
