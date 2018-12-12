@@ -72,10 +72,9 @@ class Config():
     use_pretrained = True
 
     # dataset
-    group_name = 'p1_all'
-    filename_dev = os.path.join(cwd,   "data/%s_dev.txt" %group_name)
-    filename_test = os.path.join(cwd,  "data/%s_gold.txt" %group_name)
-    filename_train = os.path.join(cwd, "data/%s_train.txt" %group_name)
+    filename_dev = os.path.join(cwd,   "data/dev.txt")
+    filename_test = os.path.join(cwd,  "data/gold.txt")
+    filename_train = os.path.join(cwd, "data/train.txt")
 
     #filename_dev = filename_test = filename_train = "data/test.txt" # test
 
